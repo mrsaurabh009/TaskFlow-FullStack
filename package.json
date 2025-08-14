@@ -1,0 +1,47 @@
+{
+  "name": "taskflow-fullstack",
+  "version": "1.0.0",
+  "description": "TaskFlow - Full-stack task management application with React-like frontend and Node.js/Express backend",
+  "scripts": {
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "start": "concurrently \"npm run backend:start\" \"npm run frontend:start\"",
+    "backend:dev": "cd backend && npm run dev",
+    "backend:start": "cd backend && npm start",
+    "backend:install": "cd backend && npm install",
+    "frontend:dev": "cd frontend && live-server --port=3000 --host=localhost --open=/",
+    "frontend:start": "cd frontend && live-server --port=3000 --host=localhost --open=/",
+    "frontend:install": "npm install -g live-server",
+    "install:all": "npm run backend:install && npm run frontend:install",
+    "test": "cd backend && npm test",
+    "build": "echo 'Building full-stack project...' && npm run backend:install",
+    "postinstall": "npm run install:all"
+  },
+  "keywords": [
+    "taskflow",
+    "task-management",
+    "fullstack",
+    "nodejs",
+    "express",
+    "javascript",
+    "rest-api"
+  ],
+  "author": "TaskFlow Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-repo/taskflow-fullstack"
+  },
+  "homepage": "http://localhost:3000",
+  "main": "backend/server.js",
+  "directories": {
+    "backend": "./backend",
+    "frontend": "./frontend"
+  }
+}
